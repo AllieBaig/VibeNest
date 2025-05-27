@@ -1,0 +1,48 @@
+
+<!-- index.html -->
+<!-- MIT License - 2025-05-27 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Subliminal Playlist Player</title>
+  <link rel="stylesheet" href="styles/main.css" />
+  <link rel="stylesheet" href="styles/player.css" />
+</head>
+<body>
+  <header>
+    <h1>Subliminal Playlist Player</h1>
+    <div id="ui-controls">
+      <button id="toggle-easy-mode">Easy Mode</button>
+      <button id="toggle-theme">Theme</button>
+      <button id="toggle-font">Font Size</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="playlist-panel" aria-label="Playlist Manager">
+      <h2>Playlist</h2>
+      <ul id="playlist" role="list"></ul>
+      <button id="add-track">Add Track</button>
+    </section>
+
+    <section id="player-panel" aria-label="Player">
+      <h2>Player</h2>
+      <audio id="audio-player" controls></audio>
+      <div id="player-controls">
+        <button id="play">Play</button>
+        <button id="pause">Pause</button>
+        <button id="loop-toggle">Loop</button>
+        <label>
+          Delay (sec):
+          <input type="number" id="delay-time" min="0" value="0" />
+        </label>
+        <div id="countdown">Countdown: <span id="time-left">00:00</span></div>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="scripts/main.js"></script>
+</body>
+</html>
